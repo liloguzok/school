@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+.main-header {
+    color: green;
+    background-color: #f02d37;
+    border: 1px single black;
+}
+
+img {
+    padding: 20px
+}
+
+.header-text {
+    color: black;
+    font-size: 1.5em;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.workers-table {
+    color: red;
+    font-size: 1.5em;
+    font-family: Arial;
+    font-weight: bold;
+    padding: 10px 50px;
+}
+
+.task-header {
+    color: black;
+    font-size: 1em;
+    font-family: Arial;
+    font-weight: bold;
+    padding: 10px 50px;
+    border: none;
+}
+
+.task-page {
+    color: green;
+    font-size: 1.5em;
+    font-family: Arial;
+    font-weight: bold;
+    padding: 10px 50px;
+}
+
+.table-header {
+    color: black;
+    margin: 10px;
+}
+
+td {
+    padding: 10px 10px;
+    border: solid 1px black;
+    text-align: center;
+}
+
+.head {
+    padding: 1px 1px;
+}
+
+.form-task-treatment {
+    padding: 0px 50px;
+}
+

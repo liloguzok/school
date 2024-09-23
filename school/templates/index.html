@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block header_text %}
+<b>Перечень учеников школы</b>
+{% endblock %}
+
+
+
+{% block info %}
+    <table class="students-table">
+    {% for index in range(number) %}
+            <tr>
+                <td>
+
+                    <a href="/student/{{index+1}}"><img src="{{data[index]['img']}}" alt="" height="120px"></a>
+
+                </td>
+                <td>
+                    {{data[index]['student_id']}}. {{data[index]['first_name']}} {{data[index]['last_name']}}
+                </td>
+            </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

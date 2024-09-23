@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block header_text %}
+<b>Задания ученика</b>
+{% endblock %}
+
+{% block info %}
+    <table class="students-table task-page">
+        <tr class="table-header">
+                <td>
+                    Фото
+                </td>
+                <td>
+                    Табельный номер
+                </td>
+                <td>
+                    Фамилия
+                </td>
+                <td>
+                    Имя
+                </td>
+            </tr>
+        <tr>
+                <td>
+                    <img src= "{{student_info['img']}}" alt="" height="100px">
+                </td>
+                <td>
+                    {{ student_info['student_id'] }}
+                </td>
+                <td>
+                    {{ student_info['first_name'] }}
+                </td>
+                <td>
+                    {{ student_info['last_name'] }}
+                </td>
+            </tr>
+    </table>
+<form action="" method="POST" class="form-task-treatment">
+    <p>Новое задание:</p>
+    <p><textarea name="task" id="" cols="100" rows="5"></textarea></p>
+    <p><input type="submit" name="new-task" value="Создать">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="delete-button" value="Удалить задания" class="delete-button"></p>
+</form>
+    <table class="task-header head">
+        <tr>
+            <td class = "task-header head">
+                <h1>Задания ученика</h1>
+            </td>
+        </tr>
+    </table>
+
+<table class="task-header">
+    {% for task in task_info %}
+            <tr>
+                <td>
+                    {{task['task_id']}}
+                </td>
+                <td>
+                    {{task['task']}}
+                </td>
+                <td>
+                    {{task['date']}}
+                </td>
+            </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
+
+
